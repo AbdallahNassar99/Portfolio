@@ -1,0 +1,393 @@
+$main-color: #0ef;
+$bg-color: #0d1c24;
+$text-color: #fff;
+
+
+html 
+{
+    scroll-behavior: smooth; 
+}
+body
+{
+    font-family: 'Calibri';
+    color: $text-color;
+    font-size: 18px;
+    background-image: url('../assets/images/portfolio-background.webp');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+a
+{
+    text-decoration: none;
+    color: $text-color;
+    &:hover
+    {
+        color: $main-color;
+    }
+}
+section
+{
+    min-height: 100vh;  
+    padding: 4rem 0 2rem;
+}
+button
+{
+    padding: 0.5rem 2rem;
+    background-color: $main-color;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    box-shadow: 0 0 .3rem $main-color;
+    &:hover
+    {
+        box-shadow: none;
+    }
+}
+span
+{
+    color: $main-color;
+}
+p
+{
+    line-height: 1.75rem;
+}
+// Beginning header styles
+.header
+{ 
+    background-color: $bg-color;
+    z-index: 999;
+    h2
+    {
+        color: $main-color;
+        font-size: 1.5rem;
+    }
+    .drop-down
+    {
+        background-color: $bg-color;
+    }
+    ul 
+    {
+        li 
+        {
+            a.active 
+            {
+                color: $main-color;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .header
+    {
+        .nav-menu
+        {
+            display: none;
+        }
+        .bars
+        {
+            display: block !important;
+            cursor: pointer;
+        }
+    }
+}
+// End header styles
+// Beginning home styles
+.home
+{
+    background-color: rgb(0, 0, 0, .3);
+    padding: 8rem 0 4rem;
+    h1 
+    {
+        font-size: 3rem;
+    }
+    .icons
+    {
+        a
+        {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $main-color;
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: $main-color;
+            &:hover
+            {
+                background-color: $main-color;
+                color: $bg-color;
+            }
+        }
+        .gmail
+        {
+            i 
+            {
+                font-size: 1.5rem;
+                color: $main-color;
+            }
+        }
+    }
+    .home-image
+    {
+        img 
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    }
+}
+@media screen and (max-width: 992px) 
+{
+    .home-image
+    {
+       img 
+       {
+         width: 240px !important; 
+         height: 240px !important;
+         border-radius: 50%;
+       }
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .home 
+    {
+        h1 
+        {
+           font-size: 2.15rem;
+        }
+        .home-body
+        {
+           flex-direction: column-reverse;
+           .home-image 
+           {
+               text-align: center;
+               margin-bottom: 3rem;
+           }
+        }  
+    }
+}
+// End home styles
+// Beginning about styles
+.about
+{
+    background-color: rgba(19, 43, 54, 0.7);
+    svg 
+    {
+        vertical-align: sub;
+    }
+}
+// End home styles
+// Beginning projects styles
+.projects
+{
+    h2
+    {
+        font-size: 2.5rem;
+    }
+    .project-content
+    {
+        background-color: rgba(19, 43, 54, 0.8);
+    }
+    .project-image
+    {
+        img  
+        {
+            width: 80%;
+        }
+    }
+    .project-sources
+    {
+        .report
+        {
+            button 
+            {
+                margin-right: 3rem;
+                padding: 0.5rem 2.75rem;
+                background-color: transparent;
+                color: #fff;
+                border: .15rem solid $main-color;
+            }
+        }
+        .github
+        {
+            button 
+            {
+                padding: 0.5rem 2rem;
+                background-color: transparent;
+                color: #fff;
+                border: .15rem solid $main-color;
+            }
+        }
+    }
+}
+// End projects styles
+// Beginning footer styles
+.footer
+{
+    background-color: $bg-color;
+    .footer-contact
+    {
+        i 
+        {
+            color: $main-color;
+        }
+    }
+    .icons
+    {
+        a 
+        {
+            font-size: 1.75rem;
+            color: $main-color;
+        }
+    }
+}
+// End footer styles
+@media screen and (max-width: 768px) 
+{
+    .container
+    {
+        --bs-gutter-x: 2.75rem !important;
+    }
+    .about 
+    {
+        .about-info 
+        {
+            li 
+            {
+                font-size: 1.15rem !important;
+            }
+        }
+    }
+    .projects
+    {
+        h2 
+        {
+            padding-bottom: .5rem !important;
+        }
+        .project-image
+        {
+            img  
+            {
+                width: 85%;
+            }
+        }
+        .project-sources
+        {
+            margin-top: 2rem ;
+            .report
+            {
+                button 
+                {
+                    margin-right: 1rem ;
+                    font-size: 14px;
+                    padding: 0.5rem 1.75rem;
+                    background-color: transparent;
+                    color: #fff;
+                    border: .15rem solid $main-color;
+                }
+            }
+            .github
+            {
+                button 
+                {
+                    font-size: 14px;
+                    padding: 0.5rem 1.10rem;
+                    background-color: transparent;
+                    color: #fff;
+                    border: .15rem solid $main-color;
+                }
+            }
+        }
+    }
+    .footer 
+    {
+        .container
+        {
+            --bs-gutter-x: 1rem !important;
+        }
+        .footer-contact 
+        {
+            flex-direction: column;
+            align-items: flex-start !important;
+            margin-left: 0.60rem !important;
+            .icons 
+            {
+                margin: auto;
+                padding-top: 2rem !important;
+                .linked-in
+                {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) 
+{ 
+    .home 
+    {
+        .icons 
+        {
+            .gmail 
+            {
+                span 
+                {
+                    font-size: 1.25rem !important;
+                }
+            }
+        }
+    }  
+    .footer 
+    {
+        .footer-contact
+        {
+            .email 
+            {
+                .email-info 
+                {
+                    font-size: 1.15rem !important;
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-width: 370px) 
+{
+   
+    .home 
+    {
+       .icons 
+       {
+           .gmail 
+           {  
+               span 
+               {
+                   font-size: 17px !important;
+               }
+           }
+       }
+    }     
+    .footer 
+    {
+        .footer-contact
+        {
+            .email 
+            {
+                .email-info 
+                {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    } 
+}
